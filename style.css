@@ -200,7 +200,7 @@ header {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.9)), url('Gambar Truk.jpg');
+    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.9)), url('Tempat Sampah.png') no-repeat;
     background-size: cover;
     background-position: center;
     color: white;
@@ -331,28 +331,6 @@ header {
     transition: width 0.3s ease;
 }
 
-/* Display suhu */
-.temperature-display {
-    text-align: center;
-    padding: 10px 0;
-}
-
-.temp-value {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: var(--primary);
-    margin-bottom: 5px;
-}
-
-.temp-status {
-    font-size: 0.9rem;
-    color: var(--text-light);
-}
-
-.temp-status.normal {
-    color: var(--accent);
-}
-
 /* Kapasitas wadah */
 .capacity-item {
     margin-bottom: 15px;
@@ -384,24 +362,24 @@ header {
     color: var(--text-light);
 }
 
-/* Status motor */
-.motor-item {
+/* Status sistem */
+.system-item {
     display: flex;
     justify-content: space-between;
     padding: 8px 0;
     border-bottom: 1px solid #e9ecef;
 }
 
-.motor-item:last-child {
+.system-item:last-child {
     border-bottom: none;
 }
 
-.motor-state.active {
+.system-state.active {
     color: var(--accent);
     font-weight: bold;
 }
 
-.motor-state.normal {
+.system-state.normal {
     color: var(--primary);
 }
 
@@ -1111,103 +1089,80 @@ footer {
     font-size: 1rem;
 }
 
-/* Connection Status Styles */
-.connection-status {
-    margin-top: 15px;
-}
-
-.status-indicator {
+/* Location Status */
+.location-status {
     display: flex;
-    align-items: center;
-    padding: 10px 15px;
-    border-radius: 4px;
-    background: rgba(46, 204, 113, 0.1);
-    border-left: 4px solid var(--accent);
+    flex-direction: column;
+    gap: 10px;
 }
 
-.status-indicator.offline {
-    background: rgba(231, 76, 60, 0.1);
-    border-left-color: var(--warning);
-}
-
-.status-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: var(--accent);
-    margin-right: 10px;
-    animation: pulse 2s infinite;
-}
-
-.status-indicator.offline .status-dot {
-    background-color: var(--warning);
-}
-
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7);
-    }
-    70% {
-        box-shadow: 0 0 0 10px rgba(46, 204, 113, 0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(46, 204, 113, 0);
-    }
-}
-
-/* Maintenance Styles */
-.maintenance-info {
-    margin-top: 15px;
-}
-
-.maintenance-item {
+.location-item {
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
     border-bottom: 1px solid #e9ecef;
 }
 
-.maintenance-item:last-child {
+.location-item:last-child {
     border-bottom: none;
 }
 
-.maintenance-label {
-    font-weight: 500;
-}
-
-.maintenance-value {
-    color: var(--primary);
-}
-
-.maintenance-schedule {
-    margin-top: 20px;
-}
-
-.maintenance-schedule h4 {
-    margin-bottom: 10px;
-    color: var(--primary);
-}
-
-.maintenance-schedule ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.maintenance-schedule li {
-    padding: 8px 0;
-    border-bottom: 1px solid #e9ecef;
-    position: relative;
-    padding-left: 20px;
-}
-
-.maintenance-schedule li:before {
-    content: "•";
-    color: var(--accent);
+.location-status-value {
     font-weight: bold;
-    position: absolute;
-    left: 0;
 }
 
-.maintenance-schedule li:last-child {
+.location-status-value.full {
+    color: var(--warning);
+}
+
+.location-status-value.medium {
+    color: #FFCE56;
+}
+
+.location-status-value.low {
+    color: var(--accent);
+}
+
+/* Collection Schedule */
+.collection-schedule {
+    margin-top: 15px;
+}
+
+.schedule-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.schedule-item:last-child {
     border-bottom: none;
+}
+
+.schedule-time {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+/* Performance Metrics */
+.performance-metrics {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.metric-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.metric-item:last-child {
+    border-bottom: none;
+}
+
+.metric-value {
+    font-weight: bold;
+    color: var(--primary);
 }
